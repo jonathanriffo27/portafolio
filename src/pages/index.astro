@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Portafolio - Jonathan Riffo">
-  <main class="flex flex-col items-center h-full">
-    <section class="h-screen w-[70%] flex" id="home">
+  <main class="flex flex-col items-center h-full mb-16">
+    <section class="min-h-screen w-[70%] flex" id="home">
       <div class="flex flex-col justify-center">
         <h1 class="text-7xl font-bold text-zinc-700 drop-shadow-lg">
           Jonathan Riffo
@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
           text-xs md:text-base
           text-black/70 shadow-lg
           transition font-medium
-          hover:scale-110 hover:bg-white/10"
+          hover:scale-105 hover:bg-white/10"
             href="https://linkedin.com/in/jonathan.riffo"
             target="_blank"
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
         text-xs md:text-base
         text-black/70 shadow-lg
         transition font-medium
-        hover:scale-110 hover:bg-white/10"
+        hover:scale-105 hover:bg-white/10"
             href="https://github.com/midudev"
             target="_blank"
             rel="noopener noreferrer"
@@ -94,7 +94,9 @@ import Layout from "../layouts/Layout.astro";
       class="min-h-screen w-full flex flex-col items-center scroll-mt-16"
     >
       <h2 class="text-4xl font-bold drop-shadow-md">Acerca de mi</h2>
-      <p class="w-[60%] mt-12 text-center text-pretty text-lg">
+      <p
+        class="w-[60%] mt-12 text-center text-pretty text-lg text-gray-500 font-light"
+      >
         Me apasiona el desarrollo web y de software. Mi formación previa como
         Técnico de nivel superior en Turismo Aventura y mi experiencia como Guía
         Turístico me han dado competencias transversales de comunicación,
@@ -106,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
         <h3 class="my-8 text-2xl font-semibold">Habilidades tecnicas</h3>
         <ul class="flex flex-col gap-2 ml-5">
           <li class="grid grid-cols-3 gap-10 place-items-start">
-            <p class="font-medium">Lenguajes de Programacion</p>
+            <p class="font-medium text-gray-500">Lenguajes de Programacion</p>
             <div class="col-span-2">
               <span
                 class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-sm font-medium ring-1 ring-inset ring-blue-700/10"
@@ -403,7 +405,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </li>
           <li class="grid grid-cols-3 gap-10">
-            <p class="font-medium">Desarrollo FrontEnd</p>
+            <p class="font-medium text-gray-500">Desarrollo FrontEnd</p>
             <div class="col-span-2">
               <span
                 class="inline-flex items-center rounded-md bg-orange-300 px-2 py-1 text-sm font-medium ring-1 ring-inset ring-blue-700/10"
@@ -503,7 +505,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </li>
           <li class="grid grid-cols-3 gap-10">
-            <p class="font-medium">Desarrollo BackEnd</p>
+            <p class="font-medium text-gray-500">Desarrollo BackEnd</p>
             <div class="col-span-2">
               <span
                 class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-sm font-medium ring-1 ring-inset ring-blue-700/10"
@@ -814,7 +816,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </li>
           <li class="grid grid-cols-3 gap-10">
-            <p class="font-medium">Base de Datos</p>
+            <p class="font-medium text-gray-500">Base de Datos</p>
             <div class="col-span-2">
               <span
                 class="inline-flex items-center rounded-md bg-blue-300 px-2 py-1 text-sm font-medium ring-1 ring-inset ring-blue-700/10"
@@ -882,7 +884,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </li>
           <li class="grid grid-cols-3 gap-10">
-            <p class="font-medium">Control de versiones</p>
+            <p class="font-medium text-gray-500">Control de versiones</p>
             <div class="col-span-2">
               <span
                 class="inline-flex items-center rounded-md bg-orange-300 px-2 py-1 text-sm font-medium ring-1 ring-inset ring-blue-700/10"
@@ -923,9 +925,9 @@ import Layout from "../layouts/Layout.astro";
         </ul>
       </div>
     </section>
-    <section class="flex flex-col items-center w-[50%]">
+    <section class="min-h-screen flex flex-col items-center w-[60%]">
       <h2 class="text-4xl font-bold drop-shadow-md">Experiencia</h2>
-      <ol class="relative border-s border-gray-300 mt-12 mb-28">
+      <ol class="relative border-s border-gray-300 mt-20 mb-28 ml-12">
         <li class="mb-5 ms-4">
           <div
             class="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border border-white"
@@ -947,10 +949,14 @@ import Layout from "../layouts/Layout.astro";
             otras.
           </p>
           <a
-            href="#"
+            href="https://desafiolatam.com/incubadora/"
+            target="_blank"
             class="inline-flex items-center px-4 py-1 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-blue-500 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-500"
             >Saber mas<svg
-              class="w-3 h-3 ms-2 rtl:rotate-180"
+              class="w-3
+            h-3
+            ms-2
+            rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -962,8 +968,8 @@ import Layout from "../layouts/Layout.astro";
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-            </svg></a
-          >
+            </svg>
+          </a>
         </li>
         <li class="mb-5 ms-4">
           <div
@@ -1005,8 +1011,113 @@ import Layout from "../layouts/Layout.astro";
         </li>
       </ol>
     </section>
-    <section class="flex flex-col items-center w-[50%] h-screen">
+    <section class="min-h-screen flex flex-col items-center w-[50%] mb-44">
       <h2 class="text-4xl font-bold drop-shadow-md">Proyectos</h2>
+      <div class="block rounded-lg bg-white shadow-xl mt-12">
+        <div class="relative overflow-hidden bg-cover bg-no-repeat">
+          <img class="rounded-t-lg" src="/433shots_so.png" alt="" />
+        </div>
+        <div class="p-6">
+          <h5
+            class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50"
+          >
+            3xi - Estudio de polarizacion
+          </h5>
+          <p class="mb-4 text-base text-gray-500 dark:text-neutral-200">
+            Desarrollo web para visualizar la brecha de percepcion en la
+            poblacion chilena a traves de un formulario con distintas frases
+            donde el usuario debe decidir que tan de acuerdo esta con su propio
+            sector y con el opuesto.
+          </p>
+          <p class="text-base text-neutral-600 dark:text-neutral-200">
+            <small class="text-neutral-500 dark:text-neutral-400"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+      <div class="block rounded-lg bg-white shadow-xl mt-12">
+        <div class="relative overflow-hidden bg-cover bg-no-repeat">
+          <img class="rounded-t-lg" src="/433shots_so.png" alt="" />
+        </div>
+        <div class="p-6">
+          <h5
+            class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50"
+          >
+            3xi - Estudio de polarizacion
+          </h5>
+          <p class="mb-4 text-base text-gray-500 dark:text-neutral-200">
+            Desarrollo web para visualizar la brecha de percepcion en la
+            poblacion chilena a traves de un formulario con distintas frases
+            donde el usuario debe decidir que tan de acuerdo esta con su propio
+            sector y con el opuesto.
+          </p>
+          <p class="text-base text-neutral-600 dark:text-neutral-200">
+            <small class="text-neutral-500 dark:text-neutral-400"
+              >Last updated 3 mins ago</small
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="min-h-screen flex flex-col items-center w-[60%] py-8 lg:py-16"
+    >
+      <h2 class="text-4xl font-bold drop-shadow-md text-center">Contacto</h2>
+      <p
+        class="lg:my-10 font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg"
+      >
+        ¿Tienes alguna pregunta, sugerencia o comentario sobre mi trabajo? No
+        dudes en contactarme por correo electrónico o por el formulario. Me
+        gustaría saber de ti y colaborar en tus proyectos.
+      </p>
+      <form action="#" class="space-y-6 w-[70%]">
+        <div>
+          <label
+            for="email"
+            class="block mb-2 font-medium text-gray-900 dark:text-gray-300"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg ring-blue-500 focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500 block w-full p-2.5"
+            placeholder="nombre@email.com"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="subject"
+            class="block mb-2 font-medium text-gray-900 dark:text-gray-300"
+            >Asunto</label
+          >
+          <input
+            type="text"
+            id="subject"
+            class="block p-3 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500"
+            placeholder="Dime con que puedo ayudarte"
+            required
+          />
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block mb-2 font-medium text-gray-900 dark:text-gray-400"
+            >Mensaje</label
+          >
+          <textarea
+            id="message"
+            rows="5"
+            class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500"
+            placeholder="Deja tu comentario..."></textarea>
+        </div>
+        <button
+          type="submit"
+          class="py-2 px-4 font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          >Enviar mensaje</button
+        >
+      </form>
     </section>
   </main>
 </Layout>
