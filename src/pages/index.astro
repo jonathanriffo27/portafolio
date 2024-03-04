@@ -4,15 +4,34 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portafolio - Jonathan Riffo">
   <main class="flex flex-col items-center h-full mb-16">
-    <section class="min-h-screen w-[70%] flex" id="home">
-      <div class="flex flex-col justify-center">
-        <h1 class="text-7xl font-bold text-zinc-700 drop-shadow-lg">
-          Jonathan Riffo
-        </h1>
-        <p class="text-3xl mt-4 text-blue-500 font-medium drop-shadow-md">
-          Desarrollador Full Stack
-        </p>
-        <nav class="flex gap-2 mt-8 flex-wrap">
+    <section class="min-h-screen w-[85%] sm:w-[80%] md:w-[70%] flex" id="home">
+      <div class="flex flex-col justify-center items-center md:items-start">
+        <div class="flex flex-wrap w-full relative">
+          <div class="flex flex-col items-center w-full md:items-start">
+            <h1
+              class="text-7xl font-bold text-zinc-700 drop-shadow-lg text-center"
+            >
+              Jonathan Riffo
+            </h1>
+            <p class="text-3xl text-blue-500 font-medium drop-shadow-md">
+              Desarrollador Full Stack
+            </p>
+          </div>
+
+          <div
+            class="flex justify-center w-full lg:w-fit md:justify-normal my-3 lg:absolute lg:-right-48 -top-10"
+          >
+            <img
+              src="/fotoPerfil.jpg"
+              alt="Foto de perfil"
+              class="w-44 rounded-full shadow-2xl border border-blue-500"
+            />
+          </div>
+        </div>
+
+        <nav
+          class="flex gap-2 flex-wrap justify-center md:justify-normal w-full lg:mt-4"
+        >
           <a
             class="border border-zinc-400 rounded-full
           flex justify-center items-center gap-x-2
@@ -81,21 +100,14 @@ import Layout from "../layouts/Layout.astro";
           </a>
         </nav>
       </div>
-      <div class="flex items-center ml-16 mb-28">
-        <img
-          src="/fotoPerfil.jpg"
-          alt="Foto de perfil"
-          class="w-44 rounded-full shadow-2xl border border-blue-500"
-        />
-      </div>
     </section>
     <section
       id="profile"
-      class="min-h-screen w-full flex flex-col items-center scroll-mt-16"
+      class="min-h-screen w-full flex flex-col items-center scroll-mt-12 mb-28"
     >
       <h2 class="text-4xl font-bold drop-shadow-md">Acerca de mi</h2>
       <p
-        class="w-[60%] mt-12 text-center text-pretty text-lg text-gray-500 font-light"
+        class="w-[85%] md:w-[60%] mt-12 text-center text-pretty text-lg text-gray-500 font-light"
       >
         Me apasiona el desarrollo web y de software. Mi formación previa como
         Técnico de nivel superior en Turismo Aventura y mi experiencia como Guía
@@ -104,8 +116,8 @@ import Layout from "../layouts/Layout.astro";
         al avance tecnológico y resolver problemas reales con soluciones
         digitales desde mi actual posicion como Desarrollador Junior.
       </p>
-      <div class="w-[70%] flex flex-col items-center">
-        <h3 class="my-8 text-2xl font-semibold">Habilidades tecnicas</h3>
+      <div class="w-[90%] md:w-[70%] flex flex-col items-center">
+        <h3 class="mt-10 mb-8 text-2xl font-semibold">Habilidades tecnicas</h3>
         <ul class="flex flex-col gap-2 ml-5">
           <li class="grid grid-cols-3 gap-10 place-items-start">
             <p class="font-medium text-gray-500">Lenguajes de Programacion</p>
@@ -925,9 +937,9 @@ import Layout from "../layouts/Layout.astro";
         </ul>
       </div>
     </section>
-    <section class="min-h-screen flex flex-col items-center w-[60%]">
+    <section id='experience' class="flex flex-col items-center w-[85%] md:w-[60%] mb-28 scroll-mt-12">
       <h2 class="text-4xl font-bold drop-shadow-md">Experiencia</h2>
-      <ol class="relative border-s border-gray-300 mt-20 mb-28 ml-12">
+      <ol class="relative border-s border-gray-300 mt-12 ml-7 md:ml-12">
         <li class="mb-5 ms-4">
           <div
             class="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border border-white"
@@ -1011,7 +1023,7 @@ import Layout from "../layouts/Layout.astro";
         </li>
       </ol>
     </section>
-    <section class="min-h-screen flex flex-col items-center w-[50%] mb-44">
+    <section id="projects" class="flex flex-col items-center w-[80%] md:w-[50%] mb-28 scroll-mt-12">
       <h2 class="text-4xl font-bold drop-shadow-md">Proyectos</h2>
       <div class="block rounded-lg bg-white shadow-xl mt-12">
         <div class="relative overflow-hidden bg-cover bg-no-repeat">
@@ -1061,17 +1073,18 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section
-      class="min-h-screen flex flex-col items-center w-[60%] py-8 lg:py-16"
+    id='contact'
+      class="min-h-screen flex flex-col items-center w-[85%] md:w-[60%] pt-8 lg:pt-16 -scroll-mt-4"
     >
       <h2 class="text-4xl font-bold drop-shadow-md text-center">Contacto</h2>
       <p
-        class="lg:my-10 font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg"
+        class="mt-12 mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg"
       >
         ¿Tienes alguna pregunta, sugerencia o comentario sobre mi trabajo? No
         dudes en contactarme por correo electrónico o por el formulario. Me
         gustaría saber de ti y colaborar en tus proyectos.
       </p>
-      <form action="#" class="space-y-6 w-[70%]">
+      <form action="#" class="space-y-6 w-[90%] md:w-[70%]">
         <div>
           <label
             for="email"
