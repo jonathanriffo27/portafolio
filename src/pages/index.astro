@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Portafolio - Jonathan Riffo">
   <main class="flex flex-col items-center h-full mb-16">
     <section class="min-h-screen w-[85%] sm:w-[80%] md:w-[70%] flex" id="home">
-      <div class="flex flex-col justify-center items-center md:items-start">
+      <div class="flex flex-col justify-center items-center lg:items-start">
         <div class="flex flex-wrap w-full relative">
-          <div class="flex flex-col items-center w-full md:items-start">
+          <div class="flex flex-col items-center w-full lg:items-start">
             <h1
               class="text-7xl font-bold text-zinc-700 drop-shadow-lg text-center"
             >
@@ -19,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div
-            class="flex justify-center w-full lg:w-fit md:justify-normal my-3 lg:absolute lg:-right-48 -top-10"
+            class="flex justify-center w-full lg:w-fit lg:justify-normal my-3 lg:absolute lg:-right-48 -top-10"
           >
             <img
               src="/fotoPerfil.jpg"
@@ -30,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <nav
-          class="flex gap-2 flex-wrap justify-center md:justify-normal w-full lg:mt-4"
+          class="flex gap-2 flex-wrap justify-center lg:justify-normal w-full lg:mt-4"
         >
           <a
             class="border border-zinc-400 rounded-full
@@ -937,7 +937,10 @@ import Layout from "../layouts/Layout.astro";
         </ul>
       </div>
     </section>
-    <section id='experience' class="flex flex-col items-center w-[85%] md:w-[60%] mb-28 scroll-mt-12">
+    <section
+      id="experience"
+      class="flex flex-col items-center w-[85%] md:w-[60%] mb-28 scroll-mt-12"
+    >
       <h2 class="text-4xl font-bold drop-shadow-md">Experiencia</h2>
       <ol class="relative border-s border-gray-300 mt-12 ml-7 md:ml-12">
         <li class="mb-5 ms-4">
@@ -1023,7 +1026,10 @@ import Layout from "../layouts/Layout.astro";
         </li>
       </ol>
     </section>
-    <section id="projects" class="flex flex-col items-center w-[80%] md:w-[50%] mb-28 scroll-mt-12">
+    <section
+      id="projects"
+      class="flex flex-col items-center w-[80%] md:w-[50%] mb-28 scroll-mt-12"
+    >
       <h2 class="text-4xl font-bold drop-shadow-md">Proyectos</h2>
       <div class="block rounded-lg bg-white shadow-xl mt-12">
         <div class="relative overflow-hidden bg-cover bg-no-repeat">
@@ -1035,7 +1041,7 @@ import Layout from "../layouts/Layout.astro";
           >
             3xi - Estudio de polarizacion
           </h5>
-          <p class="mb-4 text-base text-gray-500 dark:text-neutral-200">
+          <p class="mb-4 text-base text-gray-500 dark:text-neutral-400">
             Desarrollo web para visualizar la brecha de percepcion en la
             poblacion chilena a traves de un formulario con distintas frases
             donde el usuario debe decidir que tan de acuerdo esta con su propio
@@ -1058,7 +1064,7 @@ import Layout from "../layouts/Layout.astro";
           >
             3xi - Estudio de polarizacion
           </h5>
-          <p class="mb-4 text-base text-gray-500 dark:text-neutral-200">
+          <p class="mb-4 text-base text-gray-500 dark:text-neutral-400">
             Desarrollo web para visualizar la brecha de percepcion en la
             poblacion chilena a traves de un formulario con distintas frases
             donde el usuario debe decidir que tan de acuerdo esta con su propio
@@ -1073,7 +1079,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section
-    id='contact'
+      id="contact"
       class="min-h-screen flex flex-col items-center w-[85%] md:w-[60%] pt-8 lg:pt-16 -scroll-mt-4"
     >
       <h2 class="text-4xl font-bold drop-shadow-md text-center">Contacto</h2>
@@ -1084,16 +1090,21 @@ import Layout from "../layouts/Layout.astro";
         dudes en contactarme por correo electrónico o por el formulario. Me
         gustaría saber de ti y colaborar en tus proyectos.
       </p>
-      <form action="#" class="space-y-6 w-[90%] md:w-[70%]">
+      <form
+        action="https://formsubmit.co/jonathan.riffo7@gmail.com"
+        method="POST"
+        class="space-y-6 w-[90%] md:w-[70%]"
+      >
         <div>
           <label
             for="email"
-            class="block mb-2 font-medium text-gray-900 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-900 dark:text-gray-400"
             >Email</label
           >
           <input
             type="email"
             id="email"
+            name="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg ring-blue-500 focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500 block w-full p-2.5"
             placeholder="nombre@email.com"
             required
@@ -1102,11 +1113,12 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <label
             for="subject"
-            class="block mb-2 font-medium text-gray-900 dark:text-gray-300"
+            class="block mb-2 font-medium text-gray-900 dark:text-gray-400"
             >Asunto</label
           >
           <input
             type="text"
+            name="asunto"
             id="subject"
             class="block p-3 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500"
             placeholder="Dime con que puedo ayudarte"
@@ -1121,6 +1133,7 @@ import Layout from "../layouts/Layout.astro";
           >
           <textarea
             id="message"
+            name="Mensaje"
             rows="5"
             class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-0 focus:outline-none focus:border-2 focus:border-blue-500"
             placeholder="Deja tu comentario..."></textarea>
@@ -1130,7 +1143,74 @@ import Layout from "../layouts/Layout.astro";
           class="py-2 px-4 font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >Enviar mensaje</button
         >
+        <!-- <input type="hidden" name="_next" value="http://localhost:4321/" /> -->
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- <div id="alertbox1" class="alertbox">
+          <div class="alertbox-header">Success</div>
+          <div class="alertbox-message">
+            Your form has been submitted successfully.
+          </div>
+        </div> -->
       </form>
     </section>
   </main>
 </Layout>
+
+<script>
+  const alertbox1 = document.getElementById("alertbox1");
+  window.addEventListener("submit", function () {
+    alertbox1.style.display = "block";
+    setTimeout(function () {
+      alertbox1.style.display = "none";
+    }, 6000);
+  });
+</script>
+
+<style>
+  .alertbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+  }
+
+  .alertbox-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: green;
+  }
+
+  .alertbox-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #182939;
+  }
+
+  .alertbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .alertbox.error {
+    background-color: #ffffff;
+  }
+
+  .alertbox.error .alertbox-header {
+    color: red;
+  }
+</style>
