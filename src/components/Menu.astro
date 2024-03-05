@@ -42,7 +42,7 @@
 
 <nav
   id="navbar-default"
-  class="nav-menu fixed inset-y-0 lg:left-4 z-10 opacity-0 lg:opacity-100 bg-zinc-200 lg:bg-inherit w-1/2 md:w-1/3 transition-all ease-in-out"
+  class="nav-menu fixed inset-y-0 lg:left-4 z-[-1] opacity-0 lg:opacity-100 bg-zinc-200 lg:bg-inherit w-1/2 md:w-1/3 transition-all ease-in-out"
 >
   <div class="h-full flex justify-center items-center">
     <div class="w-full ps-6">
@@ -111,6 +111,8 @@
   menu.addEventListener("click", () => {
     menuOpen.classList.toggle("opacity-100");
     menuOpen.classList.toggle("verMenu");
+    menuOpen.classList.toggle("z-10");
+    menuOpen.classList.toggle("z-[-1]");
     menuButton.classList.toggle("ti-menu-2");
     menuButton.classList.toggle("ti-x");
     opacidad.classList.toggle("hidden");
@@ -118,6 +120,8 @@
   menuOpen.addEventListener("click", () => {
     menuOpen.classList.remove("opacity-100");
     menuOpen.classList.remove("verMenu");
+    menuOpen.classList.toggle("z-10");
+    menuOpen.classList.toggle("z-[-1]");
     opacidad.classList.add("hidden");
     menuButton.classList.toggle("ti-menu-2");
     menuButton.classList.toggle("ti-x");
@@ -125,6 +129,8 @@
   opacidad.addEventListener("click", () => {
     menuOpen.classList.remove("opacity-100");
     menuOpen.classList.remove("verMenu");
+    menuOpen.classList.toggle("z-10");
+    menuOpen.classList.toggle("z-[-1]");
     opacidad.classList.add("hidden");
     menuButton.classList.toggle("ti-menu-2");
     menuButton.classList.toggle("ti-x");
